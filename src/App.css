@@ -92,9 +92,3 @@ border-bottom: 2px solid gray;
 .btn--selected {
 background-color: tomato;
 }
-
-@media screen and (max-width: 40rem) {
-  .BarChart-bar {
-  font-size: 3vw;
-  }
-} 
