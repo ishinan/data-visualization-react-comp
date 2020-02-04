@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   // define starting state
@@ -160,9 +161,9 @@ class App extends Component {
             ))}
           </div>
         </div>
-        <div className='footer'>
+        <Footer>
             <div>Note: the vertical height is based on value of 1 unit of each currency to a base currency</div>
-        </div>
+        </Footer>
     </div>
     );
     }
