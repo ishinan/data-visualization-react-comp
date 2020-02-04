@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Header from './components/Header/Header';
+
 class App extends Component {
   // define starting state
   state = {
@@ -122,9 +124,9 @@ class App extends Component {
   render(){
     return (
       <div className='Container' >
-        <div className='header'>
+        <Header>
           <h1> Data Visualization</h1>
-        </div>
+        </Header>
         <div className='main'>
           <div className='BarChart-header'>
             <div className="BarChart-header--title">
