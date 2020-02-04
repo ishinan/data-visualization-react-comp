@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import BarChart from './components/BarChart/BarChart';
+import Dropdown from './components/Dropdown/Dropdown';
 
 class App extends Component {
   // define starting state
@@ -134,18 +135,9 @@ class App extends Component {
             <div className="BarChart-header--title">
                 Currency
             </div>
-            <div className="BarChart-header--base-selection" id='base-selection'>
-                <form>
-                Base: 
-                <select onChange={this.onChangeBaseCurrencyHandler}>
-                  {this.state.baseCurrencies.map(item => (
-                    item === this.state.baseCurrency? 
-                    <option value={item} selected>{item}</option>
-                    : <option value={item}>{item}</option>
-                  ))}
-                </select>
-                </form>
-            </div>
+            <Dropdown onChange={this.onChangeBaseCurrencyHandler} 
+             baseCurrencies={this.state.baseCurrencies}
+             baseCurrency={this.state.baseCurrency} />
           </div>
           <div className='BarChart-choices' id="list-box">List Of Currencies: 
           {this.state.listCurrencies.map( item => (
