@@ -88,29 +88,6 @@ height: 280px;
 border-bottom: 2px solid gray;
 }
 
-.BarChart-bar {
-height: 200px;
-width: 300px;
-background-color: var(--chart-bar01);
-border: 0px 0px 0px 0px solid black;
-border-bottom: 0px;
-padding-top: 0.2rem;
-margin-top: 5px;
-margin-right: 2%;
-text-align: center;
-transition: box-shadow 0.5s;
-font-size: minmax(3vw, 5rem);
-}
-
-.BarChart-bar:nth-child(odd) {
-background-color: var(--chart-bar02);
-}
-.BarChart-bar:first-child {
-margin-left: 2%;
-}
-.BarChart-bar:hover {
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.96);
-}
 
 .btn--selected {
 background-color: tomato;
