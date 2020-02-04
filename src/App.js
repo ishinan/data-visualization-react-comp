@@ -3,6 +3,7 @@ import './App.css';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import BarChart from './components/BarChart/BarChart';
 
 class App extends Component {
   // define starting state
@@ -154,12 +155,10 @@ class App extends Component {
 
           ))}
           </div>
-          <div className='BarChart-frame' id='chart-location'>
-            {this.state.currencies.map( (item, indx) => (
-              <div className='BarChart-bar' style={this.state.heights[indx]}>{item} <br/>
-              {this.state.exchangeRates[item]}</div>
-            ))}
-          </div>
+          <BarChart 
+            currencies={this.state.currencies} 
+            heights={this.state.heights} 
+            exchangeRates={this.state.exchangeRates} />
         </div>
         <Footer>
             <div>Note: the vertical height is based on value of 1 unit of each currency to a base currency</div>
