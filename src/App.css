@@ -53,16 +53,6 @@ align-self: center;
 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
 
-.footer {
-height: 4rem;
-margin-top: 2.5rem;
-padding: 0.4rem;
-text-align: center;
-grid-area: footer;
-/* border: 1px solid black; */
-background-color: skyblue;
-}
-
 .BarChart-header {
 background-color: lightgray;
 text-align: center;
@@ -92,3 +82,9 @@ border-bottom: 2px solid gray;
 .btn--selected {
 background-color: tomato;
 }
+
+@media screen and (max-width: 40rem) {
+  .BarChart-bar {
+  font-size: 3vw;
+  }
+} 

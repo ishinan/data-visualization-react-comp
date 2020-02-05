@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import BarChart from './components/BarChart/BarChart';
 import Dropdown from './components/Dropdown/Dropdown';
+import Button from './components/Button/Button';
 
 class App extends Component {
   // define starting state
@@ -137,20 +138,19 @@ class App extends Component {
             </div>
             <Dropdown onChange={this.onChangeBaseCurrencyHandler} 
              baseCurrencies={this.state.baseCurrencies}
-             baseCurrency={this.state.baseCurrency} />
+             baseCurrency={this.state.baseCurrency} 
+             />
           </div>
-          <div className='BarChart-choices' id="list-box">List Of Currencies: 
-          {this.state.listCurrencies.map( item => (
-             this.state.currencies.includes(item)?
-            <button className='btn--selected' value={item} onClick={this.onClickCurrencyHandler}>{item}</button> :
-            <button value={item} onClick={this.onClickCurrencyHandler}>{item}</button>
-
-          ))}
-          </div>
+          <Button 
+            listCurrencies={this.state.listCurrencies} 
+            currencies={this.state.currencies} 
+            onClick={this.onClickCurrencyHandler}
+            />
           <BarChart 
             currencies={this.state.currencies} 
             heights={this.state.heights} 
-            exchangeRates={this.state.exchangeRates} />
+            exchangeRates={this.state.exchangeRates} 
+            />
         </div>
         <Footer>
             <div>Note: the vertical height is based on value of 1 unit of each currency to a base currency</div>
